@@ -1,0 +1,433 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.main {
+  height: 100vh;
+}
+.page1 {
+  cursor: crosshair;
+  background-color: gold;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.startingmsg {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.5rem;
+}
+.startingbtn {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.13rem;
+  background-color: black;
+  color: white;
+  height: 53px;
+  width: 153px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  cursor: pointer;
+}
+
+/* loading page2 */
+.active1 .page1 {
+  height: 0%;
+  transform: translateX(100%);
+}
+.active1 .startingbtn {
+  display: none;
+}
+.active1 .startingmsg {
+  display: none;
+}
+
+.page2 {
+  transform: translateZ(100%);
+  background-color: red;
+  height: 100%;
+  transition: all 0.23s linear;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.active1 .page2 {
+  transform: translateZ(0);
+  transition: all 0.13s linear;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* css of page2  */
+.page2 {
+  cursor: move;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+.startingmsg2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+.box {
+  height: 30rem;
+  width: 47rem;
+  color: white;
+  background-color: rgb(184, 153, 153);
+  box-shadow: 5px 5px 100px 5px rgba(0, 0, 0, 1);
+  position: relative;
+}
+.tasklist {
+  padding-left: 33px;
+  font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  margin-top: 25px;
+  margin-left: 30px;
+  height: 22rem;
+  word-wrap: break-word;
+  width: 33rem;
+  overflow-y: scroll;
+}
+.tasklist ul {
+  list-style: circle;
+}
+
+.tasklist::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+.entertask {
+  position: absolute;
+  bottom: 53px;
+  left: 143px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: absolute;
+}
+.entertask input {
+  padding-left: 3px;
+  border-radius: 20px;
+  width: 22rem;
+  height: 2rem;
+  text-align: center;
+  color: black;
+  position: relative;
+  
+}
+.entertask .icon {
+  font-size: 30px;
+  padding-bottom: 37px;
+  cursor: pointer;
+  color: black;
+  width: 2rem;
+  height: 2rem;
+}
+
+.startingbtn2 {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.13rem;
+  background-color: black;
+  color: white;
+  height: 33px;
+  width: 213px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 41px;
+  margin-left: 535px;
+}
+
+.active2 .page2 {
+  height: 0%;
+  transform: translateZ(100%);
+}
+.active2 .startingbtn2 {
+  display: none;
+}
+.active2 .tasklist {
+  display: none;
+}
+.page3 {
+  cursor: grabbing;
+  transform: translateZ(100%);
+  background-color: purple;
+  height: 100%;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.active2 .page3 {
+  transform: translateZ(0);
+  transition: all 0.13s linear;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* page3  */
+.page3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page3 h1 {
+  font-family: "Times New Roman", Times, serif;
+  padding: 13px;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: white;
+}
+.box2 {
+  height: 35rem;
+  width: 77rem;
+  color: white;
+  background-color: purple;
+  box-shadow: 5px 5px 100px 5px rgba(0, 0, 0, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  position: relative;
+}
+
+.leftbox {
+  background-color: black;
+  width: 45%;
+  height: 90%;
+  background-color: purple;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+}
+.middlebox{
+  height: 90%;
+  width: 0.3%;
+  background-color: gold;
+  box-shadow: 5px 5px 100px 5px rgba(0, 0, 0, 1);
+  
+}
+.rightbox {
+  text-align: center;
+  background-color: black;
+  width: 45%;
+  height: 90%;
+  background-color: purple;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.leftbox h2,
+.rightbox h2 {
+  text-decoration: underline;
+}
+.checklist {
+  padding: 29px 50px;
+  text-align: start;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  /* border: 1px solid black; */
+  width: 75%;
+  height:70%;
+  margin: 45px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.checklist ul {
+  list-style-type: none;
+}
+.checklist ul li{
+  
+  padding: 3px;
+}
+.checklist::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+.checklist2 {
+  padding: 29px 50px;
+  text-align: start;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  /* border: 1px solid black; */
+  width: 75%;
+  height:70%;
+  margin: 45px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.checklist2 ul {
+  list-style-type: none;
+}
+.checklist2 ul li{
+  
+  padding: 3px;
+}
+.checklist2::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.addmoreBtn {
+  background-color: pink;
+  color: black;
+  box-shadow: 5px 5px 100px 5px rgba(0, 0, 0, 1);
+  font-size: 15px;
+  overflow: hidden;
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+  width: 75px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 13px;
+}
+#addmoreTask {
+  background-color: pink;
+  color: black;
+  box-shadow: 5px 5px 100px 5px rgba(0, 0, 0, 1);
+  font-size: 15px;
+  overflow: hidden;
+  border-top-left-radius: 23px;
+  border-bottom-left-radius: 23px;
+  width: 200px;
+  position: absolute;
+  bottom: 17px;
+  left: 75px;
+  text-align: center;
+  transform: translateY(0);
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  border: 1px solid black;
+}
+.addtask #addmoreTask {
+  transform: translateY(0);
+  transition: all 0.7s linear;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.startingbtn3{
+  cursor:context-menu;
+  height: 55px;
+  width: 55px;
+  font-size: 50px;
+  position: absolute;
+  bottom: 7px;
+  right: 0;
+}
+
+/* page4 */
+
+.active3 .page3 {
+  height: 0%;
+  transform: translateX(100%);
+}
+.active3 .startingbtn3 {
+  display: none;
+}
+.active3 .tasklist {
+  display: none;
+}
+.page4 {
+  cursor: grabbing;
+  transform: translateY(100%);
+  background-color: black;
+  color: white;
+  height: 100%;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active3 .page4 {
+  transform: translateZ(0);
+  transition: all 0.13s linear;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.boxL{
+  cursor: crosshair;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-color: #050505;
+  gap: 24px;
+  box-shadow: 5px 5px 100px 5px rgba(255, 255, 255, 0.7);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.boxL h1{
+  font-size: 50px;
+}
+.lastBtn{
+  width: 300px;
+  height: 30px;
+}
+
+
+/* /////////////////// */
+@media screen and (max-width: 768px) {
+  .startingmsg,
+  .startingbtn,
+  .startingbtn2,
+  .startingbtn3 {
+    font-size: 1rem;
+  }
+
+  .startingbtn,
+  .startingbtn2,
+  .startingbtn3 {
+    height: 40px;
+    width: 120px;
+    font-size: 0.9rem;
+  }
+
+  .page2,
+  .page3,
+  .page4 {
+    position: relative;
+  }
+
+  .page2 .box,
+  .page3 .box2 {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+/* making ui for mobile phones */
+@media (max-width:430px) {
+ 
+.main {
+  height: 50vh;
+}
+  
+}
